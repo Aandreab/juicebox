@@ -63,6 +63,7 @@ const {
     } catch (error) {
       console.error("Error testing database!");
       throw error;
+      //client.end();
     }
   }
   async function createInitialUsers() {
@@ -71,10 +72,10 @@ const {
       console.log("Starting to create users...");
   
       const aandrea = await createUser({ username: 'aandrea', password: 'bertie99' });
-      const aandreaTwo = await createUser({ username: 'aandrea', password: 'imposter_albert' });
-  
+      const barrios = await createUser({ username: 'barrios', password: 'hello' });
       console.log(aandrea);
-      console.log(aandreaTwo);
+      console.log(barrios)
+  
 
   
       console.log("Finished creating users!");
